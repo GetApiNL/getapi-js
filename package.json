@@ -1,0 +1,89 @@
+{
+  "name": "@getapinl/getapi",
+  "version": "1.0.0",
+  "description": "JavaScript/TypeScript-client voor GetAPI.nl: KVK, BTW/VAT, BAG-adres, WOZ, energielabel en meer Nederlandse data",
+  "keywords": [
+    "getapi",
+    "kvk",
+    "kvk-api",
+    "btw",
+    "vat",
+    "vies",
+    "bag",
+    "postcode",
+    "woz",
+    "energielabel",
+    "rdw",
+    "netherlands",
+    "dutch",
+    "nederland"
+  ],
+  "homepage": "https://getapi.nl",
+  "license": "MIT",
+  "author": "GetAPI.nl <info@getapi.nl>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GetApiNL/getapi-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GetApiNL/getapi-js/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:smoke": "node scripts/smoke.mjs",
+    "check:package": "publint --strict && attw --pack . --profile node16",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run test:smoke && npm run check:package",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.10.1",
+    "publint": "^0.3.25",
+    "tsup": "^8.3.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^4.1.12"
+  }
+}
