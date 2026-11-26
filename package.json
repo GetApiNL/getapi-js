@@ -1,6 +1,6 @@
 {
   "name": "@getapinl/getapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript/TypeScript-client voor GetAPI.nl: KVK, BTW/VAT, BAG-adres, WOZ, energielabel en meer Nederlandse data",
   "keywords": [
     "getapi",

@@ -1,7 +1,7 @@
 import { InvalidArgumentError } from './errors.js';
 import { Transport, type GetApiResponse, type RequestOptions } from './transport.js';
 
-export const VERSION = '1.0.0';
+export const VERSION = '1.0.1';
 export const DEFAULT_BASE_URL = 'https://api.getapi.nl';
 
 /** Een Nederlands huisadres, in losse delen. */
