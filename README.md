@@ -121,6 +121,8 @@ Je API-key hoort op de server. Zet hem niet in code die in een browser draait, w
 
 ## Ontwikkelen
 
+Voor ontwikkelen is Node 22.18 of hoger nodig. Het pakket zelf werkt vanaf Node 18.
+
 ```bash
 npm install
 npm run check

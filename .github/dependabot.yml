@@ -8,6 +8,9 @@ updates:
       # De types volgen de oudste ondersteunde Node-versie, niet de nieuwste.
       - dependency-name: '@types/node'
         update-types: ['version-update:semver-major']
+      # Vitest 5 vereist Node 22.12 of hoger; de unit tests draaien ook op Node 20.
+      - dependency-name: vitest
+        update-types: ['version-update:semver-major']
     groups:
       dev-dependencies:
         dependency-type: development
