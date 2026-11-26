@@ -141,6 +141,7 @@ npm run check
 Een nieuwe versie publiceren: verhoog `version` in `package.json` en `VERSION` in `src/client.ts`, werk de CHANGELOG bij en maak een release met de tag `vX.Y.Z`. De workflow publiceert het pakket dan op npm met provenance.
 
 ## Totstandkoming
+
 Deze package is met behulp van AI geschreven en voor zover mogelijk door GetApi.nl beoordeeld. De code wordt gecontroleerd door een testsuite met 100% dekking, door een contracttest tegen de [OpenAPI-spec](https://getapi.nl/openapi.json) en door ruff en mypy --strict.
 Zie je iets dat niet klopt? Open een [issue](https://github.com/GetApiNL/getapi-python/issues).
 
